@@ -1,0 +1,22 @@
+[package]
+name = "stm32f103"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[profile.release]
+lto = true
+debug = true
+opt-level = 's'
+
+[dependencies]
+stm32f1xx-hal = { version = "^0.7", features = ["rt", "stm32f103", "medium", "stm32-usbd"] }
+cortex-m-rt = "^0.6.15"
+cortex-m = "^0.7.0"
+embedded-hal = "^0.2.6"
+usb-device = "*"
+panic-halt = "*"
+usbd-serial = "*"
+scsi = "*"
+nb = "*"
