@@ -92,7 +92,7 @@ fn main() -> ! {
 
     usb_dev.force_reset().ok();
 
-    delay(clocks.sysclk().0 / 10);
+    delay(clocks.sysclk().0 / 100);
 
     // Don't care about the result: will have a chance to reinit
     sd.init().ok();
